@@ -2,6 +2,9 @@
 
 This repository is a minimal example to reproduce a crash at startup when using Spring Boot native with Datadog.
 
+## My environment
+- I work on a Macbook Pro, with Apple M3 Pro chip.
+
 ## How to reproduce
 
 1. Clone this repository
