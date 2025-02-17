@@ -80,6 +80,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
+						<cleanCache>true</cleanCache>
 						<env>
 							<BP_DATADOG_ENABLED>true</BP_DATADOG_ENABLED>
 						</env>
@@ -88,5 +89,28 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>native-fix</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.springframework.boot</groupId>
+							<artifactId>spring-boot-maven-plugin</artifactId>
+							<configuration>
+								<image>
+									<env>
+										<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+									</env>
+								</image>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 
 </project>

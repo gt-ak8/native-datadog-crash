@@ -4,6 +4,7 @@ This repository is a minimal example to reproduce a crash at startup when using 
 
 ## My environment
 - I work on a Macbook Pro, with Apple M3 Pro chip.
+- I build the image with Paketo Buildpacks, via the Spring boot integration
 
 ## How to reproduce
 

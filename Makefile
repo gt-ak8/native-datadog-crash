@@ -24,6 +24,14 @@ build-image-native:
 	-Dspring-boot.build-image.imageName=datadog-crash-native \
 	-DskipTests
 
+build-image-native-fix:
+	./mvnw clean \
+	package \
+	-P native,native-fix \
+	spring-boot:build-image \
+	-Dspring-boot.build-image.imageName=datadog-crash-native \
+	-DskipTests
+
 start-app-jvm:
 	docker compose up app-jvm
 

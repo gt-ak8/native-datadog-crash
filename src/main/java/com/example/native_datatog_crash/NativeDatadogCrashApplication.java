@@ -3,6 +3,7 @@ package com.example.native_datatog_crash;
 import jakarta.persistence.*;
 import java.util.List;
 import java.util.UUID;
+import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RegisterReflectionForBinding(UUID[].class)
 public class NativeDatadogCrashApplication {
 
     public static void main(String[] args) {
